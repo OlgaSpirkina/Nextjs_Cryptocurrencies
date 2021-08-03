@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+.main_style{
+  width: 100vw;
+  height: 15vh;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #fff;
+}
+#navigation{
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#navigation li{
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #333333;
+}
+#navigation li:hover{
+  color: #266FB6;
+}
+#broad_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: .7rem;
+  text-align: right;
+}
+#broad_info li{
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  line-height: 1.7;
+}
+#broad_info li span{
+  color: #0645ad;
+}
+.logo_container{
+  display: flex;
+  align-items: center;
+  margin-left: 12rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.logo_container span{
+  margin-left: 2rem;
+}
+.logo_container span strong{
+  font-size: 2rem;
+}
+.logoimg{
+  scale: 1.3;
+}
+.flex a{
+  width: 7rem;
+  margin: 1rem;
+  text-decoration: underline;
+}
+.flex:hover{
+  scale: 1.2;
+}

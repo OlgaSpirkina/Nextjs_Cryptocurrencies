@@ -1,0 +1,12 @@
+#table{
+  margin: 0 auto;
+  padding: .5rem;
+  background-color: rgba(255, 255, 255, .6);
+}
+#table thead tr{
+  border-bottom: 1px solid grey;
+}
+#table thead tr th{
+  text-align: left;
+  padding: 1rem 1rem 1rem 0;
+}

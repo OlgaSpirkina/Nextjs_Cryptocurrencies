@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
+import Table from '../components/Table'
 import styles from '../styles/Home.module.css'
 export default function Home({filteredCoins, broadInfo}) {
+  console.log({filteredCoins});
   return (
     <div className={styles.main_container}>
       <Head>
@@ -11,23 +13,21 @@ export default function Home({filteredCoins, broadInfo}) {
       </Head>
       <Navbar broadInfo={broadInfo}/>
       <h1>Welcome to Shayp!</h1>
-      <main>
-
-      </main>
+      <Table filteredCoins={filteredCoins} />
     </div>
   )
 }
 
 export async function getServerSideProps() {
-  const [filteredCoinsRes, broadInfoRes, converterRes] = await Promise.all([
-    fetch('https://api.coinpaprika.com/v1/coins'),
+  const [broadInfoRes, converterRes, filteredCoinsRes] = await Promise.all([
     fetch('https://api.coinpaprika.com/v1/global'),
-    fetch('https://api.coinpaprika.com/v1/price-converter')
+    fetch('https://api.coinpaprika.com/v1/price-converter'),
+    require( 'coinpaprika-js' )
   ]);
-  const [filteredCoins, broadInfo, converter] = await Promise.all([
-    filteredCoinsRes.json(),
+  const [broadInfo, converter, filteredCoins] = await Promise.all([
     broadInfoRes.json(),
-    converterRes.json()
+    converterRes.json(),
+    filteredCoinsRes.tickers()
   ]);
-  return { props: { filteredCoins, broadInfo, converter } };
+  return { props: {broadInfo, converter, filteredCoins} };
 }
