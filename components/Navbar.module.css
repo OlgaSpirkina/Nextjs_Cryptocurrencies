@@ -1,0 +1,14 @@
+.main_style{
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  margin: 2rem 0;
+}
+.flex a{
+  width: 7rem;
+  margin: 1rem;
+  text-decoration: underline;
+}
+.flex:hover{
+  scale: 1.2;
+}
