@@ -1,5 +1,11 @@
-
-
+.main_container{
+  margin: 0;
+  padding: 0;
+  height: 95vh;
+  background-image: url("../img/paris_background.jpg");
+  background-position: center, center;
+  background-size: cover;
+}
 .grid {
   display: flex;
   align-items: center;
