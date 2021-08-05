@@ -1,34 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a project created with [Next.js].
 
-## Getting Started
+## Shayp Cryptocurrency
 
-First, run the development server:
+![grab-landing-page](https://raw.githubusercontent.com/OlgaSpirkina/Nextjs_Cryptocurrencies/main/assets/img/veggie.gif) 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+If you're interested in cryptocurrency you'll find some useful information here:
+I'm tracking top 20 coins from [Coinpaprika] API and theirs statistics like:
+- price
+- volume 24h
+- price changes (1h & 24h)
+You can check the conversion rate between two top 20 cryptocurrencies.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Project technologies:
+1. Next.js 7.20.3
+2. CSS
