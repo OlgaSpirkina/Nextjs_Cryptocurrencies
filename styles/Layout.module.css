@@ -1,0 +1,19 @@
+#footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+}
+#socialmedia{
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+}
+.mediaIcons{
+  margin: 0 .5rem;
+  color: #2854A1;
+}
+.mediaIcons:hover{
+  scale: 1.1;
+}

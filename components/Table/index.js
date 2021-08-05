@@ -2,7 +2,7 @@ import React from 'react'
 import CoinList from '../CoinList'
 import styles from './Table.module.css'
 
-const Table = () => {
+const Table = ({listOfCoins}) => {
   return(
     <table id={styles.table}>
       <thead>
@@ -16,7 +16,7 @@ const Table = () => {
         </tr>
       </thead>
       <tbody>
-        <CoinList />
+        <CoinList listOfCoins={listOfCoins}/>
       </tbody>
     </table>
   )

@@ -1,5 +1,6 @@
 #row td{
   border-bottom: 1px solid grey;
+  padding: .5rem;
 }
 #row td:hover{
   background-color: rgba(255, 255, 255, .4);

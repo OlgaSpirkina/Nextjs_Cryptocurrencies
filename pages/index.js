@@ -1,8 +1,12 @@
 import Head from 'next/head'
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
 import Navbar from '../components/Navbar'
 import Table from '../components/Table'
 import styles from '../styles/Home.module.css'
-export default function Home({broadInfo}) {
+export default function Home({broadInfo, listOfCoins}) {
+  console.log(listOfCoins);
   return (
     <div className={styles.main_container}>
       <Head>
@@ -12,19 +16,21 @@ export default function Home({broadInfo}) {
       </Head>
       <Navbar broadInfo={broadInfo}/>
       <h1>Welcome to Shayp!</h1>
-      <Table />
+      <main>
+        <Table listOfCoins={listOfCoins}/>
+      </main>
     </div>
   )
 }
 
 export async function getServerSideProps() {
-  const [broadInfoRes, converterRes] = await Promise.all([
+  const [broadInfoRes, listOfCoinsRes] = await Promise.all([
     fetch('https://api.coinpaprika.com/v1/global'),
-    fetch('https://api.coinpaprika.com/v1/price-converter')
+    fetch('https://api.coinpaprika.com/v1/tickers')
   ]);
-  const [broadInfo, converter] = await Promise.all([
+  const [broadInfo, listOfCoins] = await Promise.all([
     broadInfoRes.json(),
-    converterRes.json()
+    listOfCoinsRes.json()
   ]);
-  return { props: {broadInfo, converter} };
+  return { props: {broadInfo, listOfCoins} };
 }
