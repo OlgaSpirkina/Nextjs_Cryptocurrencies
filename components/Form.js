@@ -11,8 +11,9 @@ export default function Form({coinConverter, param, changeIt}){
   			  crossOrigin="anonymous"></script>
       </Head>
       <form>
-        <h1>{param}</h1>
+        <h4>{param}</h4>
         <select id={param} onChange={changeIt}>
+          <option>coin</option>
           <OptionList coinConverter={coinConverter} />
         </select>
       </form>

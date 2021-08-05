@@ -3,7 +3,7 @@ const OptionList = ({coinConverter}) => {
   return (
     <>
     {coinConverter.map((coin, index) => {
-      if(index <= 20){
+      if(coin.rank <= 20){
         return(
           <OptionOfSelect
             key={index}
