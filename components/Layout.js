@@ -1,3 +1,4 @@
+import NavbarLayout from './NavbarLayout'
 import styles from '../styles/Layout.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,10 +7,10 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import{faEnvelopeOpen} from '@fortawesome/free-regular-svg-icons';
 
-
-export default function Layout({children}){
+export default function Layout({ children }){
   return (
     <div className={styles.container}>
+      <NavbarLayout />
         {children}
       <footer id={styles.footer}>
         <div id={styles.copyright}>Olga Spirkina &copy; 2021</div>
@@ -21,5 +22,4 @@ export default function Layout({children}){
       </footer>
     </div>
   )
-
 }
