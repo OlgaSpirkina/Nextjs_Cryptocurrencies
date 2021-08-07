@@ -45,13 +45,15 @@ export default function TwoForms({coinConverter, param}){
  return idOfCoin2;
 })();
 // J'appelle un API de conversion et passe les variable qui contiennent id des monnaies choisies et le nombre des monnaies
-const CallApi = () => {
+const CallApi = ({ idOfCoin1, idOfCoin2, inputValue }) => {
     const [currencyOptions, setCurrencyOptions] = useState()
      useEffect(() => {
+       if((idOfCoin1 != undefined) && (idOfCoin2 != undefined) && (inputValue != undefined)){
        fetch(`https://api.coinpaprika.com/v1/price-converter?base_currency_id=${idOfCoin1}&quote_currency_id=${idOfCoin2}&amount=${inputValue}`)
        .then(res => res.json())
        .then(data => {
         setCurrencyOptions(data.price)}); // data.price c'est la valeur de conversion
+      }
      }, []);
      return(
        // currencyOptions est mise à jour grâce à la methode setCurrencyOptions
@@ -68,7 +70,7 @@ const CallApi = () => {
         <Form coinConverter={coinConverter} param="From" changeIt={changeItFirst} value={valueFirst} className={styles.forms} />
         <Form coinConverter={coinConverter} param="To" changeIt={changeItSecond} value={valueSecond} className={styles.forms} />
       </div>
-      <CallApi />
+      <CallApi idOfCoin1={idOfCoin1} idOfCoin2={idOfCoin2} inputValue={inputValue}/>
     </div>
   )
 }
