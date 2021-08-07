@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Navbar.module.css'
 
-function Navbar({ broadInfo }) {
+function Navbar() {
   return (
     <nav className={styles.main_style}>
       <div className={styles.logo_container}>
@@ -21,16 +21,8 @@ function Navbar({ broadInfo }) {
           <a href="/">About</a>
         </li>
       </ul>
-      <div>
-        <ul id={styles.broad_info}>Some info
-          <li>BTC Dominance: <span>{broadInfo.bitcoin_dominance_percentage} %</span></li>
-          <li>Vol 24h: <span>{broadInfo.volume_24h_usd}</span></li>
-          <li>Market Cap: <span>{broadInfo.market_cap_ath_value}</span></li>
-          <li>Total quantity: <span>{broadInfo.cryptocurrencies_number}</span></li>
-        </ul>
-      </div>
     </nav>
   )
 }
 
-export default Navbar
+export default Navbar;
