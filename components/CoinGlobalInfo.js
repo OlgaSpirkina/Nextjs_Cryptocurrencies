@@ -6,9 +6,9 @@ export default function CoinGlobalInfo({ broadInfo }){
     <div>
      <ul id={styles.broad_info}>Some info
        <li>BTC Dominance: <span>{broadInfo.bitcoin_dominance_percentage} %</span></li>
-       <li>Vol 24h: <span>{broadInfo.volume_24h_usd}</span></li>
-       <li>Market Cap: <span>{broadInfo.market_cap_ath_value}</span></li>
-       <li>Total quantity: <span>{broadInfo.cryptocurrencies_number}</span></li>
+       <li>Vol 24h: €<span>{broadInfo.volume_24h_usd.toLocaleString()}</span></li>
+       <li>Market Cap: €<span>{broadInfo.market_cap_ath_value.toLocaleString()}</span></li>
+       <li>Total quantity: <span>{broadInfo.cryptocurrencies_number.toLocaleString()}</span></li>
      </ul>
     </div>
   )

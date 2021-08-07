@@ -57,7 +57,7 @@ const CallApi = ({ idOfCoin1, idOfCoin2, inputValue }) => {
      }, []);
      return(
        // currencyOptions est mise à jour grâce à la methode setCurrencyOptions
-       <p className={styles.display_converter_result}>Ici on affiche le montant: {currencyOptions}</p>
+       <p className={styles.display_converter_result}>Currency rate: {currencyOptions}</p>
      )
    }
   return(
