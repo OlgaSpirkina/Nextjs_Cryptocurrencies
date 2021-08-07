@@ -11,3 +11,36 @@
 .red{
   color: red;
 }
+.card_for_coin{
+  width: 25vw;
+  padding: 1rem;
+  margin: .5rem auto;
+  border: 1px solid #5dc4e4;
+  box-shadow: 5px 10px 8px #888888;
+}
+.card_for_coin:hover{
+  background-color: rgba(93, 196, 228, .1)
+}
+.small{
+  color: #000;
+}
+@media only screen and (max-device-width : 350px) {
+  .card_for_coin{
+    width: 90vw;
+  }
+}
+@media only screen and (min-device-width : 351px) and (max-device-width : 450px) {
+  .card_for_coin{
+    width: 70vw;
+  }
+}
+@media only screen and (min-device-width : 451px) and (max-device-width : 550px) {
+  .card_for_coin{
+    width: 50vw;
+  }
+}
+@media only screen and (min-device-width : 551px) and (max-device-width : 750px) {
+  .card_for_coin{
+    width: 40vw;
+  }
+}

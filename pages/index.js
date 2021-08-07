@@ -1,13 +1,20 @@
-import Table from '../components/Table'
 import CoinGlobalInfo from '../components/CoinGlobalInfo'
+import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
+
+// Table is called dynamicly because it's display depends on media queries
+const DynamicTable = dynamic(() => import('../components/Table'), { ssr: false })
+function DynamicTableCaller({ listOfCoins }) {
+    return <DynamicTable listOfCoins={listOfCoins} />
+}
+
 export default function Home({ broadInfo, listOfCoins }) {
   return (
     <div className={styles.main_container}>
     <CoinGlobalInfo broadInfo={broadInfo}/>
       <h1>Welcome to Shayp!</h1>
       <main>
-        <Table listOfCoins={listOfCoins}/>
+        <DynamicTableCaller listOfCoins={listOfCoins}/>
       </main>
     </div>
   )
