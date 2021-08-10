@@ -1,13 +1,14 @@
 import {useEffect, useState} from 'react'
 import TwoForms from '../components/TwoForms'
 import CoinGlobalInfo from '../components/CoinGlobalInfo'
+import MainParagraph from '../components/MainParagraph'
 import styles from '../styles/Home.module.css'
 
 export default function Converter({ broadInfo, coinConverter }){
   return (
   <div className={styles.converter_container}>
+    <MainParagraph prop={'Check the conversion rate here:'} />
     <CoinGlobalInfo broadInfo={broadInfo}/>
-    <h1>Welcome to Converter !</h1>
     <TwoForms coinConverter={coinConverter}/>
   </div>
   )

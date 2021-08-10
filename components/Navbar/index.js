@@ -1,7 +1,10 @@
 import React from 'react'
+import Link from 'next/link'
+import { useRouter } from "next/router"
 import styles from './Navbar.module.css'
 
 function Navbar() {
+  const router = useRouter();
   return (
     <nav className={styles.main_style}>
       <div className={styles.logo_container}>
@@ -11,14 +14,14 @@ function Navbar() {
         <span><strong>Shayp </strong><br/>The future of cryptocurrency</span>
       </div>
       <ul id={styles.navigation}>
-        <li>
-          <a href="/">Coins</a>
+        <li className={router.pathname == "/" ? `${styles.active}` : ""}>
+          <Link href="/"><a>Coins</a></Link>
+        </li>
+        <li className={router.pathname == "/converter" ? `${styles.active}` : ""}>
+          <Link href="/converter"><a>Converter</a></Link>
         </li>
         <li>
-          <a href="/converter">Converter</a>
-        </li>
-        <li>
-          <a href="https://www.shayp.com/fr/" target="_blank">About</a>
+          <Link href="https://www.shayp.com/fr/" target="_blank"><a>About</a></Link>
         </li>
       </ul>
     </nav>

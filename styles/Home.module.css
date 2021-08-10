@@ -51,4 +51,7 @@
     width: 100%;
     flex-direction: column;
   }
+  .converter_container{
+    height: 90vh;
+  }
 }

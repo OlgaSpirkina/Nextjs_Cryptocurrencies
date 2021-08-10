@@ -2,14 +2,15 @@
 #forms_container{
   width: 30vw;
   margin: 0 auto;
+  padding: 1rem;
+  padding-top: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
-  padding: 1rem;
-  border: 1px solid rgba(78, 71, 76, .7);
-  background-color: rgba(177, 181, 184, .45);
+  border: 1px solid rgba(177, 181, 184);;
+  background-color: rgba(255, 255, 255, .5);
   border-radius: .7rem;
 }
 #forms_parent{
@@ -25,7 +26,6 @@
   border-radius: .7rem;
   border: none;
   color: #fff;
-  background-color: rgba(78, 71, 76, .7);
   background-color: rgb(40, 84, 161);
 }
 #input_parent{
@@ -47,6 +47,7 @@
   margin: 2rem auto;
   padding: .5rem;
   background-color: rgba(255, 255, 255, .8);
+  border: 1px solid rgba(177, 181, 184);
   font-size: 1.2rem;
   text-align: center;
   border-radius: 1rem;

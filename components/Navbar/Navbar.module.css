@@ -22,6 +22,10 @@
   line-height: 1.5;
   color: #333333;
 }
+/* la class de l'element de navbar de la page actuelle est rajouter dynamiquement avec useRouter()*/
+.active{
+  border-bottom: 2px solid #266FB6;
+}
 #navigation li:hover{
   color: #266FB6;
 }
