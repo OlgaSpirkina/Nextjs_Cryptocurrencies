@@ -1,14 +1,15 @@
 import CoinGlobalInfo from '../components/CoinGlobalInfo'
+import React, { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
 
-// Table is called dynamicly because it's display depends on media queries
+// Table is called dynamicly because the way it's displayed depends on media queries
 const DynamicTable = dynamic(() => import('../components/Table'), { ssr: false })
 function DynamicTableCaller({ listOfCoins }) {
     return <DynamicTable listOfCoins={listOfCoins} />
 }
-
 export default function Home({ broadInfo, listOfCoins }) {
+
   return (
     <div className={styles.main_container}>
     <CoinGlobalInfo broadInfo={broadInfo}/>
@@ -19,19 +20,6 @@ export default function Home({ broadInfo, listOfCoins }) {
     </div>
   )
 }
-
-// export async function getStaticProps() {
-//   const listOfCoinsRes = await fetch('https://api.coinpaprika.com/v1/tickers')
-//   const listOfCoins = await listOfCoinsRes.json()
-//   if (!listOfCoins) {
-//     return {
-//       notFound: true,
-//     }
-//   }
-//   return {
-//     props: { listOfCoins }
-//   }
-// }
 
 export async function getStaticProps() {
   const [broadInfoRes, listOfCoinsRes] = await Promise.all([

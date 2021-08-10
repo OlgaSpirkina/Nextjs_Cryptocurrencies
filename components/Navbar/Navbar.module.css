@@ -69,10 +69,11 @@
 .flex:hover{
   scale: 1.2;
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 500px) {
+@media only screen and (max-device-width : 500px) {
   .main_style,
   #navigation{
     flex-direction: column;
+    height: 20vh;
   }
   #navigation{
     padding-left: 1rem;
@@ -96,7 +97,11 @@
     margin-top: .5rem;
   }
   .logo_container span{
+    font-size: .7rem;
     margin-left: 1rem;
+  }
+  .main_style{
+    height: 20vh;
   }
   #navigation{
     position: absolute;
@@ -104,9 +109,6 @@
     padding-left: 1rem;
     padding-top: 7rem;
     align-items: flex-start;
-  }
-  .logo_container span{
-    font-size: .9rem;
   }
 }
 @media only screen and (min-device-width : 681px){

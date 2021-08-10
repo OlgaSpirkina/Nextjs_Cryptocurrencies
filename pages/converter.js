@@ -25,7 +25,7 @@ export async function getStaticProps() {
   return { props: {broadInfo, coinConverter} };
 }
 
-
+// setInterval(() =>   fetch('https://api.coinpaprika.com/v1/global'), 60000),
 /*
   export async function getStaticProps() {
   const res = await fetch('https://api.coinpaprika.com/v1/global')
