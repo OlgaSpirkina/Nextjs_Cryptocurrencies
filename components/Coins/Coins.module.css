@@ -24,22 +24,22 @@
 .small{
   color: #000;
 }
-@media only screen and (max-device-width : 350px) {
+@media only screen and (max-width : 350px) {
   .card_for_coin{
     width: 90vw;
   }
 }
-@media only screen and (min-device-width : 351px) and (max-device-width : 450px) {
+@media only screen and (min-width : 351px) and (max-width : 450px) {
   .card_for_coin{
     width: 70vw;
   }
 }
-@media only screen and (min-device-width : 451px) and (max-device-width : 550px) {
+@media only screen and (min-width : 451px) and (max-width : 550px) {
   .card_for_coin{
     width: 50vw;
   }
 }
-@media only screen and (min-device-width : 551px) and (max-device-width : 750px) {
+@media only screen and (min-width : 551px) and (max-width : 750px) {
   .card_for_coin{
     width: 40vw;
   }
