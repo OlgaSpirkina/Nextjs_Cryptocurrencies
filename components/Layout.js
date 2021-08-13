@@ -24,8 +24,8 @@ export default function Layout({ children, broadInfo }){
       <footer id={styles.footer}>
         <div id={styles.copyright}>Olga Spirkina &copy; 2021</div>
         <div id={styles.socialmedia}>
-          <FontAwesomeIcon className={styles.mediaIcons} icon={faGithub} size="2x"/>
-          <FontAwesomeIcon className={styles.mediaIcons} icon={faLinkedin} size="2x"/>
+          <a href="https://github.com/OlgaSpirkina" target="_blank"><FontAwesomeIcon className={styles.mediaIcons} icon={faGithub} size="2x"/></a>
+          <a href="https://www.linkedin.com/in/olga-spirkina/" target="_blank"><FontAwesomeIcon className={styles.mediaIcons} icon={faLinkedin} size="2x"/></a>
           <FontAwesomeIcon className={styles.mediaIcons} icon={faEnvelopeOpen} size="2x"/>
         </div>
       </footer>
