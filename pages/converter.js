@@ -23,7 +23,7 @@ export async function getStaticProps() {
     broadInfoRes.json(),
     coinConverterRes.json()
   ]);
-  return { props: {broadInfo, coinConverter} };
+  return { props: {broadInfo, coinConverter}, revalidate: 60, };
 }
 
 // setInterval(() =>   fetch('https://api.coinpaprika.com/v1/global'), 60000),

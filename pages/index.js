@@ -31,5 +31,5 @@ export async function getStaticProps() {
     broadInfoRes.json(),
     listOfCoinsRes.json()
   ]);
-  return { props: {broadInfo, listOfCoins} };
+  return { props: {broadInfo, listOfCoins}, revalidate: 60, };
 }
