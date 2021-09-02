@@ -21,7 +21,7 @@ function Navbar() {
           <Link href="/converter"><a>Converter</a></Link>
         </li>
         <li>
-          <Link href="https://www.shayp.com/fr/" target="_blank"><a>About</a></Link>
+          <Link href="/" target="_blank"><a>About</a></Link>
         </li>
       </ul>
     </nav>
