@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from "next/router"
 import styles from './Navbar.module.css'
 
@@ -21,7 +22,7 @@ function Navbar() {
           <Link href="/converter"><a>Converter</a></Link>
         </li>
         <li>
-          <Link href="/" target="_blank"><a>About</a></Link>
+          <Link href="/" target="_blank" rel="noreferrer"><a>About</a></Link>
         </li>
       </ul>
     </nav>
